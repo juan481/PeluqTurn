@@ -1,0 +1,54 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0px;
+        }        
+        
+        /* Cambiar el color del ícono en el enlace activo */
+        .nav-item.nav-link.active .bi {
+            color: var(--primary-color);
+            }
+
+        /* Colores de Footer*/
+        /* Color de Botón activo*/
+        .nav-item.nav-link.active {
+            background-color: #6610f2;
+            }
+            
+        /* Color de Botón inactivo*/
+        .nav-item.nav-link {
+            color: #484848;
+            }
+
+        .btn-primary{
+            background-color: #6610f2;
+            border-color: #6610f2; 
+            border: 0px;
+            }   
+
+        .btn-primary:hover {
+            background-color: #550ec9; 
+            border-color: #550ec9; 
+            border: 0px;
+            }
+
+             /* Boton secundario*/
+
+        .btn.btn-secondary {
+            color: #fff;
+            background-color: #646464;
+            border: 0px;
+              }
+
+        .btn-secondary:hover {
+                background-color: #4b4b4b; 
+                }        
+              
+             /* Estilo Tarjeta de locales*/
+        .card-body {
+            color: white;
+            background-color:#6100ffba;
+            border: 0px;
+        }
+          main {
+            padding: 10px;
+          }
