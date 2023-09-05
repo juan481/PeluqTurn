@@ -13,68 +13,82 @@
    
     <title>Menú asd</title>
 </head>
-<body>
-    <header>
-        <!-- Botón volver -->
-        <nav>
-            <ul>
-                <i class="bi bi-arrow-left-circle-fill fs-2"></i>  
-            </ul>
-        </nav>
-        <!-- Fin de botón volver -->
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 "> <!-- 25% de ancho -->
+                        <!-- Botón volver -->
+                        <nav>
+                            <ul>
+                                <i class="bi bi-arrow-left-circle-fill fs-2"><a href="index.html"></a></i>  
+                            </ul>
+                        </nav>
+                        <!-- Fin de botón volver -->
+                    </div>
+                        <div class="col-md-6"> <!-- 75% de ancho -->
+                            <h2>Locales cerca de tu zona</h2>
+                        </div>
+                    <div class="col-md-3"> <!-- 25% de ancho -->
 
-    </header>
+                        <nav>
+                            <ul>
+                                <i class="bi bi-bell fs-2"><a href="index.html"></a></i>  
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </header>
 
     <main>
         <!-- Inicio del cuerpo de la web -->
-
-        <h2>Locales cerca de tu zona</h2>
+        <!-- Inicio del locales -->
+         <div class="row">
+            <div class="col-md-3 px-3 mb-3">
+                <div class="card">
+                    <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
+                        <p class="card-text"></p>
+                        <a href="local.html" class="btn btn-primary"> Reservar turno</a>
+                        <a href="#" class="btn btn-secondary"> Ver ubicación</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 px-3 mb-3">
+                <div class="card">
+                    <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
+                        <p class="card-text"></p>
+                        <a href="local.html" class="btn btn-primary"> Reservar turno</a>
+                        <a href="#" class="btn btn-secondary"> Ver ubicación</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 px-3 mb-3">
+                <div class="card">
+                    <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
+                        <p class="card-text"></p>
+                        <a href="local.html" class="btn btn-primary"> Reservar turno</a>
+                        <a href="#" class="btn btn-secondary"> Ver ubicación</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin del locales -->  
+   
         <p></p>
     </main>
-         <!-- Inicio del locales -->
-    <div class="row">
-        <div class="col-md-3 px-3 mb-3">
-            <div class="card">
-                <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
-                    <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-primary"> Reservar turno</a>
-                    <a href="#" class="btn btn-secondary"> Ver ubicación</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 px-3 mb-3">
-            <div class="card">
-                <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
-                    <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-primary"> Reservar turno</a>
-                    <a href="#" class="btn btn-secondary"> Ver ubicación</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 px-3 mb-3">
-            <div class="card">
-                <img src="imagen/barberia.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3 class="card-title"><i class="bi bi-shop"></i> Prana peluquerías</h3>
-                    <p class="card-text"><i class="bi bi-geo-alt"></i>Av. Crámer 1981, CABA</p>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-primary"> Reservar turno</a>
-                    <a href="#" class="btn btn-secondary"> Ver ubicación</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin del locales -->  
-      
-      
 
         <!-- Fin del cuerpo de la web -->
 
@@ -82,11 +96,9 @@
         <!-- Inicio de la barra de navegación  -->
     <footer class="fixed-bottom bg-light">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link" href="#"><i class="bi bi-bell fs-2"></i></a>
-            <a class="nav-item nav-link" href="#"><i class="bi bi-chat-dots fs-2"></i></a>
-            <a class="nav-item nav-link active" href="#"><i class="bi bi-geo-alt fs-2"></i></a>
             <a class="nav-item nav-link" href="#"><i class="bi bi-calendar-date fs-2"></i></a>
-            <a class="nav-item nav-link" href="#"><i class="bi bi-person fs-2"></i></a>
+            <a class="nav-item nav-link active" href="#"><i class="bi bi-geo-alt fs-2"></i></a>
+            <a class="nav-item nav-link" href="perfil.html"><i class="bi bi-person fs-2"></i></a>
         </nav>
     </footer>
         <!-- Fin de la barra de navegación  -->
