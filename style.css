@@ -70,6 +70,12 @@
         .registration-form{
             padding: 50px 0;
         }
+
+        .solicitarturno{
+            padding: 50px 0;
+        }
+
+
         
         .registration-form form{
             background-color: #dee9ff;
@@ -147,6 +153,10 @@
             text-decoration: none;
             opacity: 0.6;
         }
+
+        
+
+
         
         @media (max-width: 576px) {
             .registration-form form{
@@ -161,4 +171,20 @@
             }
         }
 
+
+        header.containerheader {
+            padding: 20px;
+        }
+
          /* Fin de Login */
+
+        .caracteristicas {
+            padding: 10px;
+            text-align: center;
+
+         }
+
+
+        .hsubi {
+            padding: 20px;
+        }
