@@ -190,19 +190,22 @@
         }
         
 .container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   
-  input {
-      padding: 22px 15px !important;
-      border: 1px solid #CFD8DC !important;
-      border-radius: 4px !important;
-      box-sizing: border-box;
-      background-color: #fff !important;
-      color: #000 !important;
-      font-size: 16px !important;
-      letter-spacing: 1px;
-      position: relative;
-  }
+
   
+
+/* ICONOS DENTRO DEL LOCAL */
+  i.bi.bi-geo-alt-fill.fs-1.text-success.mr-3 {
+    padding: 10px;
+}
+
+i.bi.bi-clock-fill.fs-1.text-primary.mr-3 {
+    padding: 10px;
+}
+
+.containerhora {
+    padding-top: 5px;
+}
