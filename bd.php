@@ -8,7 +8,7 @@ function conectarBD(){
     $nombreServidor = "localhost";
     $nombreUsuario = "root";
     $passwordBaseDeDatos = "";
-    $nombreBaseDeDatos = "crud1";
+    $nombreBaseDeDatos = "bd";
 
     // Crear conexión con la base de datos.
     // https://www.w3schools.com/php/php_ref_mysqli.asp
