@@ -145,8 +145,4 @@ function agregarMiembro($firstname,$lastname,$address){
 
 }
 
-
-  
-
-
-  ?>
+?>

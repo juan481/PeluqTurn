@@ -1,4 +1,7 @@
 <?php
+        echo "";
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -12,18 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
-   
     <title>Login</title>
 </head>
 
 <body>
     <header class="containerheader">
-        <div class="row"> 
+        <div class="row">
             <div class="col-4 text-left">
-                <i class="bi bi-arrow-left-circle-fill fs-1 text-white"></i> 
+                <i class="bi bi-arrow-left-circle-fill fs-1 text-white"></i>
             </div>
-            <div class="col-4 text-center"> <!-- Columna central con el logo -->
-                <!-- Coloca aquí tu logo -->
+            <div class="col-4 text-center">
                 <img src="imagen/login.png" alt="Logo" class="img-fluid">
             </div>
             <div class="col-4">
@@ -32,18 +33,16 @@
         </div>
     </header>
 
-    <main> 
-          <div class="registration-form">
+    <main>
+        <div class="registration-form">
             <form>
                 <div class="form-icon">
                     <span><i class="bi bi-person-circle"></i></span>
                 </div>
-            <h4 class="text-center">¡Bienvenido!</h4>
-            
+                <h4 class="text-center">¡Bienvenido!</h4>
                 <div class="form-group">
                     <input type="text" class="form-control item text-center" id="email" placeholder="Correo electrónico">
                 </div>
-                
                 <div class="form-group text-center">
                     <input type="password" class="form-control item text-center" id="password" placeholder="Contraseña">
                     <a href="olv_contra.html"><h6>¿Olvidaste tu contraseña?</h6></a>
@@ -55,7 +54,6 @@
                     <a href="registro.html"><button type="button" class="btn btn-block create-account">Registrarse</button></a>
                 </div>
                 <div class="form-group">
-               
                 </div>
             </form>
             <div class="social-media">
@@ -66,20 +64,9 @@
                     <a href="#"><i class="bi bi-twitter"></i></a>
                 </div>
             </div>
+        </div>
     </main>
-    </body>
 
-
-
-
-<footer class="fixed-bottom bg-light">
     
-</footer>
-    <!-- Fin de la barra de navegación  -->
-
-
 </body>
-
 </html>
-
-?>
