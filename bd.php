@@ -33,7 +33,7 @@ function cerrarBD($conn){
     }    
 }
 
-
+/*
 function consultarMiembros($busqueda){
     // CONSULTA - SELECT
     $db = conectarBD();
@@ -63,6 +63,28 @@ function consultarMiembros($busqueda){
 
     return $result;
 }
+*/
+
+function consultarUsuario($conn,$email,$password){
+    $resultado = NULL;
+    if ($conn!=NULL){
+        // Confección del string de la Consulta segura para evitar inyecciones SQL.
+        $formato = "SELECT * FROM usuario WHERE email='%s' AND password = '%s'";
+        $email=$conn->real_escape_string($email);         //filtra
+        $password = $conn->real_escape_string($password); //filtra
+        $sql = sprintf($formato, $email, $password);      // rearma con format
+        
+        ////Consulta sin filtro 
+        ////$sql = "SELECT * FROM usuario WHERE email= $email AND password = $password";
+    
+        $resultado = $conn->query($sql);
+    }
+    return $resultado;
+  }
+
+
+
+
 
 function actualizarMiembros($id,$firstname,$lastname,$address){
     // ACTUALIZAR - UPDATE

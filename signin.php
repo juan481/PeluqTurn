@@ -2,6 +2,7 @@
 
 include "bd.php";     //https://www.w3schools.com/php/php_includes.asp
 include "sesion.php";
+
   //session_start();
 function main(){
   // Obtengo los datos cargados en el formulario de signin.
@@ -9,9 +10,9 @@ function main(){
   $password = $_POST['password']; //"1234";
 
   // abrir conexión a base de datos, en este caso 'bd_usuario'
-  $conn = conectarBDUsuario();
+  $conn = conectarBD();
   // Ejecutar consulta
-  $resultado = consultarUsuario($conn,$email,$password);
+   $resultado = //consultarUsuario($conn,$email,$password);
   // cerrar conexión '$conn' de base de datos
   
   if($resultado!=NULL && $resultado->num_rows>0){  

@@ -122,6 +122,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `email` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL,
   `telefono` varchar(25) NOT NULL,
   `tipo_usuario` enum('administrador','usuario','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -130,10 +131,10 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `telefono`, `tipo_usuario`) VALUES
-(1, 'Mario', 'Gonzalez', 'mgonzales@gmail.com', '1112345678', 'usuario'),
-(2, 'Gustavo', 'Gomez', 'ggomez@gmail.com', '114455233', 'usuario'),
-(3, 'Camila', 'Ruiz', 'cruiz@gmail.com', '1141442235', 'administrador');
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `password`, `telefono`, `tipo_usuario`) VALUES
+(1, 'Mario', 'Gonzalez', 'mgonzales@gmail.com', '1234','1112345678', 'usuario'),
+(2, 'Gustavo', 'Gomez', 'ggomez@gmail.com', '1234', '114455233', 'usuario'),
+(3, 'Camila', 'Ruiz', 'cruiz@gmail.com', '1234', '1141442235', 'administrador');
 
 --
 -- Índices para tablas volcadas

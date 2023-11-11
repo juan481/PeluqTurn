@@ -1,8 +1,11 @@
 <?php
+<<<<<<< Updated upstream
         echo "";
 ?>
 
 
+=======
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,27 +36,41 @@
         </div>
     </header>
 
+<<<<<<< Updated upstream
     <main>
         <div class="registration-form">
             <form>
+=======
+    <main> 
+          <div class="registration-form">
+            <form action="signin.php" method="post">
+>>>>>>> Stashed changes
                 <div class="form-icon">
                     <span><i class="bi bi-person-circle"></i></span>
                 </div>
                 <h4 class="text-center">¡Bienvenido!</h4>
+<<<<<<< Updated upstream
+=======
+                
+>>>>>>> Stashed changes
                 <div class="form-group">
-                    <input type="text" class="form-control item text-center" id="email" placeholder="Correo electrónico">
+                    <input type="text" class="form-control item text-center" name="email" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group text-center">
-                    <input type="password" class="form-control item text-center" id="password" placeholder="Contraseña">
+                    <input type="password" class="form-control item text-center" name="password" placeholder="Contraseña">
                     <a href="olv_contra.html"><h6>¿Olvidaste tu contraseña?</h6></a>
                 </div>
                 <div class="form-group text-center">
-                    <a href="index.html"><button type="button" class="btn btn-block create-account">Ingresar</button></a>
+                    <button type="submit" class="btn btn-block create-account">Ingresar</button>
                 </div>
                 <div class="form-group text-center">
                     <a href="registro.html"><button type="button" class="btn btn-block create-account">Registrarse</button></a>
                 </div>
                 <div class="form-group">
+<<<<<<< Updated upstream
+=======
+            
+>>>>>>> Stashed changes
                 </div>
             </form>
             <div class="social-media">
@@ -65,6 +82,10 @@
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     </main>
 
     
