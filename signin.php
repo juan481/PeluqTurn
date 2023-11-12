@@ -18,7 +18,7 @@ include "sesion.php";
   if($resultado!=NULL && $resultado->num_rows>0){  
     crearSesion('email', $email); // crea sesion y redirige
   }else{
-    echo 'El email o password es incorrecto, <a href="index.html">vuelva a intenarlo</a>.<br/>';
+    echo 'El email o password es incorrecto, <a href="login.php">vuelva a intenarlo</a>.<br/>';
   }
   
 ?>

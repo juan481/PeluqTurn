@@ -1,3 +1,7 @@
+<?php
+        echo "";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,42 +19,36 @@
 </head>
 
 <body>
-    <header class="containerheader">
-        <div class="row"> 
-            <div class="col-4 text-left">
-                <i class="bi bi-arrow-left-circle-fill fs-1 text-white"></i> 
-            </div>
-            <div class="col-4 text-center"> <!-- Columna central con el logo -->
-                <!-- Coloca aquí tu logo -->
-                <img src="imagen/login.png" alt="Logo" class="img-fluid">
-            </div>
-            <div class="col-4">
-                <i class="bi bi-bell-fill fs-1 text-white" style="float: right;"></i>
-            </div>
-        </div>
+    <header>
+        <!-- Botón volver -->
+       
+        <!-- Fin de botón volver -->
+
     </header>
 
     <main> 
-        <div class="registration-form">
-            <form action="signin.php" method="post"> <!-- Reemplaza "tuscript.php" con la ruta correcta a tu script PHP -->
+          <div class="registration-form">
+            <form>
                 <div class="form-icon">
                     <span><i class="bi bi-person-circle"></i></span>
                 </div>
-                <h4 class="text-center">¡Bienvenido!</h4>
+            <h4 class="text-center">¿Olvidaste tu contraseña?</h4>
+            
                 <div class="form-group">
-                    <input type="text" class="form-control item text-center" id="email" name="email" placeholder="Correo electrónico">
+                    <input type="text" class="form-control item text-center" id="email" placeholder="Escribe tu correo electrónico">
+                </div>
+
+                <div class="form-group text-center">
+                    <a href="login.html"><button type="button" class="btn btn-block create-account">Enviar</button></a>
                 </div>
                 <div class="form-group text-center">
-                    <input type="password" class="form-control item text-center" id="password" name="password" placeholder="Contraseña">
-                    <a href="olv_contra.html"><h6>¿Olvidaste tu contraseña?</h6></a>
-                </div>
-                <div class="form-group text-center">
-                    <button type="submit" class="btn btn-block create-account">Ingresar</button>
+                    <a href="login.html"><button type="button" class="btn btn-block create-account">Volver al inicio</button></a>
                 </div>
                 <div class="form-group text-center">
                     <a href="registro.html"><button type="button" class="btn btn-block create-account">Registrarse</button></a>
                 </div>
                 <div class="form-group">
+               
                 </div>
             </form>
             <div class="social-media">
@@ -61,9 +59,7 @@
                     <a href="#"><i class="bi bi-twitter"></i></a>
                 </div>
             </div>
-        </div>
     </main>
-    
     </body>
 
 
@@ -75,6 +71,5 @@
     <!-- Fin de la barra de navegación  -->
 
 
-</body>
 
 </html>
