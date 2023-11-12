@@ -1,3 +1,8 @@
+
+<?php
+        echo "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,9 +87,9 @@
         <!-- Inicio de la barra de navegación  -->
     <footer class="fixed-bottom bg-light">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link" href="notificacion.html"><i class="bi bi-bell fs-2"></i></a>
-            <a class="nav-item nav-link active" href="index.html"><i class="bi bi-geo-alt fs-2"></i></a>
-            <a class="nav-item nav-link" href="perfil.html"><i class="bi bi-person fs-2"></i></a>
+            <a class="nav-item nav-link" href="notificacion.php"><i class="bi bi-bell fs-2"></i></a>
+            <a class="nav-item nav-link active" href="index.php"><i class="bi bi-geo-alt fs-2"></i></a>
+            <a class="nav-item nav-link" href="perfil.php"><i class="bi bi-person fs-2"></i></a>
         </nav>
     </footer>   
         <!-- Fin de la barra de navegación  -->

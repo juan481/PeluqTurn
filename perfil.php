@@ -1,3 +1,7 @@
+<?php
+        echo "";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -73,9 +77,9 @@
 
     <footer class="fixed-bottom bg-light">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link" href="notificacion.html"><i class="bi bi-bell fs-2"></i></a>
-            <a class="nav-item nav-link" href="index.html"><i class="bi bi-geo-alt fs-2"></i></a>
-            <a class="nav-item nav-link active" href="perfil.html"><i class="bi bi-person fs-2"></i></a>
+            <a class="nav-item nav-link" href="notificacion.php"><i class="bi bi-bell fs-2"></i></a>
+            <a class="nav-item nav-link" href="index.php"><i class="bi bi-geo-alt fs-2"></i></a>
+            <a class="nav-item nav-link active" href="perfil.php"><i class="bi bi-person fs-2"></i></a>
         </nav>
     </footer>
             <!-- Fin de la barra de navegación  -->
