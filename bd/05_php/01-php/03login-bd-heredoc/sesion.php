@@ -1,13 +1,10 @@
 <?php
 
 session_start();
-if (isset($_GET["accion"])){
-  
-    if ($_GET["accion"]=="cerrarSesion" && isset($_SESSION['email'])){
-       
+if (isset($_REQUEST["accion"])){  
+    if ($_REQUEST["accion"]=="cerrarSesion" && isset($_SESSION['email'])){
       cerrarSesion('email');
-    }
-    
+    }    
 }
 
 function cerrarSesion($clave){
@@ -27,7 +24,7 @@ function crearSesion($clave, $valor){
      
     // Redirecciono al usuario a la página principal del sitio.
     // header("HTTP/1.1 302 Moved Temporarily");  //REDIRRECCIÓN: https://desarrolloweb.com/articulos/redireccion-php-301-302.html 
-    header("Location: index.html"); 
+    header("Location: principal.php"); 
 }
 
 function controlarSesion(){

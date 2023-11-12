@@ -4,7 +4,7 @@
     $nombreServidor = "localhost";
     $nombreUsuario = "root";
     $passwordBaseDeDatos = "";
-    $nombreBaseDeDatos = "bd";
+    $nombreBaseDeDatos = "bd_usuario";
 
     // Crear conexión con la base de datos.
     // https://www.w3schools.com/php/php_ref_mysqli.asp

@@ -4,7 +4,7 @@
     $nombreServidor = "localhost";
     $nombreUsuario = "root";
     $passwordBaseDeDatos = "";
-    $nombreBaseDeDatos = "bd";
+    $nombreBaseDeDatos = "bd_usuario";
 
     // Crear conexión con la base de datos.
     // https://www.w3schools.com/php/php_ref_mysqli.asp
@@ -32,9 +32,11 @@
         $formato = "SELECT * FROM usuario WHERE email='%s' AND password = '%s'";
         $email=$conn->real_escape_string($email);         //filtra
         $password = $conn->real_escape_string($password); //filtra
-        $sql = sprintf($formato, $email, $password);      // rearma con formato
-        // Ejecución la consulta SQL.
-        //echo($sql);die();
+        $sql = sprintf($formato, $email, $password);      // rearma con format
+        
+        ////Consulta sin filtro 
+        ////$sql = "SELECT * FROM usuario WHERE email= $email AND password = $password";
+    
         $resultado = $conn->query($sql);
     }
     return $resultado;

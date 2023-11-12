@@ -3,7 +3,7 @@
 include "bd.php";     
 include "sesion.php";
   //session_start();
-
+function main(){
     // Obtengo los datos cargados en el formulario de signup.
     $apellido = $_POST['apellido'];       
     $nombre = $_POST['nombre']; 
@@ -20,9 +20,13 @@ include "sesion.php";
         if($resVerEmail!=NULL && $resVerEmail->num_rows==0){ 
             // Ejecutar consulta inserción 
             // agregar nuevo usuario
-            $filasAfectadas = agregarUsuario($conn,$apellido,$nombre,$email,$password);
+            $filasAfectadas = agregarUsuario($conn,$apellido,$nombre,$email,$password);            
+            // cerrar conexión '$conn' de base de datos
+            cerrarBDConexion($conn);  
+    
             if ($filasAfectadas>0){
-
+                
+                // o bien ir a signin.html
                 crearSesion('email', $email); // crea sesion y redirige a principal
             
             }            
@@ -40,4 +44,6 @@ include "sesion.php";
     // cerrar conexión '$conn' de base de datos
     cerrarBDConexion($conn);  
     
+}
+main();
 ?>

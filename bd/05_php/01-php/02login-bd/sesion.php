@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 if (isset($_GET["accion"])){
   
     if ($_GET["accion"]=="cerrarSesion" && isset($_SESSION['email'])){
@@ -27,7 +28,7 @@ function crearSesion($clave, $valor){
      
     // Redirecciono al usuario a la página principal del sitio.
     // header("HTTP/1.1 302 Moved Temporarily");  //REDIRRECCIÓN: https://desarrolloweb.com/articulos/redireccion-php-301-302.html 
-    header("Location: index.html"); 
+    header("Location: principal.php"); 
 }
 
 function controlarSesion(){
@@ -35,9 +36,11 @@ function controlarSesion(){
 
   $sesionUsuario=NULL;
   if(isset($_SESSION['email'])){
-    // Le asigno la sesion correspondiente al usuario
-    $sesionUsuario=$_SESSION['email'];    
     
+    $sesionUsuario=$_SESSION['email'];
+    // Le doy la bienvenida al usuario.
+    //echo 'Bienvenido <strong>' . $_SESSION['email'] . '</strong>, <a href="cerrar-sesion.php">cerrar sesión</a>';
+    //echo 'Bienvenido <strong>' . $_SESSION['email'] . '</strong>, <a href="sesion.php?accion=cerrarSesion">cerrar sesión</a>';
   }else{
 
     // Si no está logueado lo redireccion a la página de login.
