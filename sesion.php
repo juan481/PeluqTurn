@@ -1,52 +1,42 @@
 <?php
-
-session_start();
-if (isset($_GET["accion"])){
-  
-    if ($_GET["accion"]=="cerrarSesion" && isset($_SESSION['email'])){
-       
-      cerrarSesion('email');
-    }
-    
-}
-
-function cerrarSesion($clave){
-  // Elimina la variable clave en sesión.
-  unset($_SESSION[$clave]); 
- 
-  // Elimina la sesion.
-  session_destroy();
-   
-  // Redirecciona a la página de signin. 
-  header("Location: signin.html");
+// Inicia la sesión si no está iniciada
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
 }
 
 function crearSesion($clave, $valor){
-    // Guardar en la sesión el email del usuario.
     $_SESSION[$clave] = $valor;
-     
-    // Redirecciono al usuario a la página principal del sitio.
-    // header("HTTP/1.1 302 Moved Temporarily");  //REDIRRECCIÓN: https://desarrolloweb.com/articulos/redireccion-php-301-302.html 
-    header("Location: index.php"); 
 }
 
 function controlarSesion(){
-// Controlo si el usuario ya está logueado en el sistema.
-
-  $sesionUsuario=NULL;
   if(isset($_SESSION['email'])){
-    // Le asigno la sesion correspondiente al usuario
-    $sesionUsuario=$_SESSION['email'];    
-    
-  }else{
-
-    // Si no está logueado lo redireccion a la página de login.
-    // para hacer el signin
-    //header("HTTP/1.1 302 Moved Temporarily"); 
-    header("Location: signin.html"); 
+      echo "Sesión iniciada para: " . $_SESSION['email'];
+      return $_SESSION['email'];
+  } else {
+      echo "No se detectó sesión iniciada. Redirigiendo a login.php...";
+      header("Location: login.php"); // Redirige si no hay sesión activa
+      exit();
   }
-  
-  return $sesionUsuario;
 }
 
+function cerrarSesion(){
+    // Elimina todas las variables de sesión
+    $_SESSION = array();
+
+    // Si se utiliza cookies para la sesión, elimina la cookie de sesión
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
+    }
+
+    // Finaliza la sesión
+    session_destroy();
+
+    // Redirige a la página de inicio de sesión
+    header("Location: login.php");
+    exit();
+}
 ?>

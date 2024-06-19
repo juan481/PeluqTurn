@@ -28,12 +28,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `local` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `local` varchar(30) NOT NULL,
   `direccion` varchar(30) NOT NULL,
   `telefono` varchar(20) NOT NULL,
   `link_img` varchar(300) NOT NULL,
-  `id_usuario` int(11) NOT NULL
+  `id_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_usuario` (`id_usuario`),
+  CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -51,11 +54,16 @@ INSERT INTO `local` (`id`, `local`, `direccion`, `telefono`, `link_img`, `id_usu
 --
 
 CREATE TABLE `loc_serv` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_servicio` int(11) NOT NULL,
   `id_local` int(11) NOT NULL,
   `horario_ini` time NOT NULL,
-  `horario_fin` time NOT NULL
+  `horario_fin` time NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_local` (`id_local`),
+  KEY `id_servicio` (`id_servicio`),
+  CONSTRAINT `id_local` FOREIGN KEY (`id_local`) REFERENCES `local` (`id`),
+  CONSTRAINT `id_servicio` FOREIGN KEY (`id_servicio`) REFERENCES `servicio` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -75,9 +83,10 @@ INSERT INTO `loc_serv` (`id`, `id_servicio`, `id_local`, `horario_ini`, `horario
 --
 
 CREATE TABLE `servicio` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `servicio` varchar(30) NOT NULL,
-  `duracion` time NOT NULL
+  `duracion` time NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -96,12 +105,17 @@ INSERT INTO `servicio` (`id`, `servicio`, `duracion`) VALUES
 --
 
 CREATE TABLE `turno` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dia` date NOT NULL,
   `horario` time NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `estado` enum('disponible','reservado','finalizado','') NOT NULL,
-  `id_loc_serv` int(11) NOT NULL
+  `id_loc_serv` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_usuario` (`id_usuario`),
+  KEY `id_loc_serv` (`id_loc_serv`),
+  CONSTRAINT `id_loc_serv` FOREIGN KEY (`id_loc_serv`) REFERENCES `loc_serv` (`id`),
+  CONSTRAINT `nombre_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -118,14 +132,17 @@ INSERT INTO `turno` (`id`, `dia`, `horario`, `id_usuario`, `estado`, `id_loc_ser
 --
 
 CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(30) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(20) NOT NULL,
   `telefono` varchar(25) NOT NULL,
-  `tipo_usuario` enum('administrador','usuario','','') NOT NULL
+  `tipo_usuario` enum('administrador','usuario') NOT NULL DEFAULT 'usuario',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `mail` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Volcado de datos para la tabla `usuario`
