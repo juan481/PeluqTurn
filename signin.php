@@ -1,35 +1,24 @@
 <?php
-include "bd.php";     // Incluir archivo de conexión a la base de datos
-include "sesion.php"; // Incluir archivo de funciones de sesión
 
-// Verificar si se envió el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+include "bd.php";     //https://www.w3schools.com/php/php_includes.asp
+include "sesion.php";
+  //session_start();
+  
+  // Obtengo los datos cargados en el formulario de signin.
+  $email = $_POST['email'];       //"mariano@gmail.com";
+  $password = $_POST['password']; //"1234";
 
-    // Conectar a la base de datos
-    $conn = conectarBDUsuario();
-
-    // Consultar usuario con las credenciales ingresadas
-    $resultado = consultarUsuario($conn, $email, $password);
-
-    // Cerrar conexión a la base de datos
-    cerrarBDConexion($conn);
-
-    // Si se encontró un usuario con las credenciales proporcionadas
-    if ($resultado != NULL && $resultado->num_rows > 0) {
-        // Crear sesión para el usuario
-        crearSesion('email', $email);
-
-        // Redirigir a la página principal o a donde corresponda
-        header("Location: index.php");
-        exit();
-    } else {
-        // Si las credenciales son incorrectas, mostrar mensaje de error
-        $_SESSION['error'] = 'El email o contraseña ingresados son incorrectos.';
-        header("Location: login.php");
-        exit();
-    }
-}
+  // abrir conexión a base de datos, en este caso 'bd_usuario'
+  $conn = conectarBDUsuario();
+  // Ejecutar consulta
+  $resultado = consultarUsuario($conn,$email,$password);
+  // cerrar conexión '$conn' de base de datos
+  cerrarBDConexion($conn);
+  
+  if($resultado!=NULL && $resultado->num_rows>0){  
+    crearSesion('email', $email); // crea sesion y redirige
+  }else{
+    echo 'El email o password es incorrecto, <a href="login.php">vuelva a intenarlo</a>.<br/>';
+  }
+  
 ?>
