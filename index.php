@@ -2,7 +2,7 @@
 include "sesion.php"; // Incluye el archivo de sesión para utilizar las funciones
 
 // Verifica si el usuario ha iniciado sesión, de lo contrario, redirige a login.php
-if (!verificarSesion()) {
+if (verificarSesion()) {
     header("Location: login.php");
     exit();
 }
