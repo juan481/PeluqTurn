@@ -1,3 +1,7 @@
+<?php
+        echo "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,22 +34,35 @@
 
      <!-- Inicio del cuerpo de la web -->
     <main>
-        <div class="text-center">
-        <i class="bi bi-clock" style="font-size:100px"></i>
-            <h1 class="text-center">Tu solicitud a sido recibida, te notificaremos a la brevedad.</h1>
-        </div>
+        <h2>Notificaciones</h2>
 
-        <div class="form-group text-center">
+            <div class="notificaciones">
+                <div class="alert alert-success" role="alert">
+                    <p>Tu turno para las <strong> 14:00 hs </strong> en Prana peluquerías a sido <strong> ACEPTADA</strong></p>
+                </div>
 
-            <div class="registration-form">
-            <a href="notificacion.html"><button type="button" class="btn btn-block create-account">Ir a notificaciones</button> </a>
-        </div>
-    </div>
+                <div class="alert alert-danger" role="alert">
+                    <p>Tu turno para las <strong> 19:00 hs </strong> en Prana peluquerías a sido <strong> CANCELADA</strong></p>
+                    <p><strong>RAZÓN: Problema eléctrico en el local</strong></p>
+                </div>
 
+                <div class="alert alert-success" role="alert">
+                    <p>Tu turno para las <strong> 12:00 hs </strong> en Prana peluquerías a sido <strong> ACEPTADA</strong></p>
+                </div>
+
+                <div class="alert alert-success" role="alert">
+                    <p>Tu turno para las <strong> 15:30 hs </strong> en Prana peluquerías a sido <strong> ACEPTADA</strong></p>
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                    <p>Tu turno para las <strong> 19:00 hs </strong> en Prana peluquerías a sido <strong> CANCELADA</strong></p>
+                    <p><strong>RAZÓN: Cancelada por el usuario</strong></p>
+                </div>
+
+            </div>
 
     </main>
         
-    
 
 
         <!-- Inicio de la barra de navegación  -->
