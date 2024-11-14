@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS `loc_serv` (
     `id_servicio` int(11) NOT NULL,
     `horario_ini` time NOT NULL,
     `horario_fin` time NOT NULL,
+    `disponibilidad` ENUM('disponible', 'ocupado', '', '') NOT NULL
     PRIMARY KEY (`id`),
     KEY `id_local` (`id_local`),
     KEY `id_servicio` (`id_servicio`),
@@ -110,7 +111,7 @@ ALTER TABLE `local`
 -- AUTO_INCREMENT de la tabla `loc_serv`
 ALTER TABLE `loc_serv`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-  ADD COLUMN `disponibilidad` ENUM('disponible', 'ocupado', '', '') NOT NULL AFTER `horario_fin`;
+  
 -- AUTO_INCREMENT de la tabla `servicio`
 ALTER TABLE `servicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
