@@ -110,8 +110,7 @@ ALTER TABLE `local`
 -- AUTO_INCREMENT de la tabla `loc_serv`
 ALTER TABLE `loc_serv`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-  ADD `disponibilidad` ENUM('disponible','ocupado','','') NOT NULL AFTER `horario_fin`;
-
+  ADD COLUMN `disponibilidad` ENUM('disponible', 'ocupado', '', '') NOT NULL AFTER `horario_fin`;
 -- AUTO_INCREMENT de la tabla `servicio`
 ALTER TABLE `servicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
