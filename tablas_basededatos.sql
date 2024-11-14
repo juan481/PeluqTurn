@@ -47,11 +47,6 @@ CREATE TABLE IF NOT EXISTS `loc_serv` (
     CONSTRAINT `fk_loc_serv_servicio` FOREIGN KEY (`id_servicio`) REFERENCES `servicio` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-<<<<<<< HEAD
--- Turn foreign key checks back on
-SET FOREIGN_KEY_CHECKS = 1;
-
-=======
 CREATE TABLE `local` (
   `id` int(11) NOT NULL,
   `local` varchar(30) NOT NULL,
@@ -258,5 +253,4 @@ ALTER TABLE `loc_serv`
 ALTER TABLE `turno`
   ADD CONSTRAINT `id_loc_serv` FOREIGN KEY (`id_loc_serv`) REFERENCES `loc_serv` (`id`),
   ADD CONSTRAINT `nombre_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`);
->>>>>>> parent of bbdc370 (Funciona credenciales, hay que revisar login para seguir trabajando)
 COMMIT;
