@@ -1,24 +1,38 @@
 <?php
-
-include "bd.php";     //https://www.w3schools.com/php/php_includes.asp
-include "sesion.php";
-  //session_start();
-  
-  // Obtengo los datos cargados en el formulario de signin.
-  $email = $_POST['email'];       //"mariano@gmail.com";
-  $password = $_POST['password']; //"1234";
-
-  // abrir conexión a base de datos, en este caso 'bd_usuario'
-  $conn = conectarBDUsuario();
-  // Ejecutar consulta
-  $resultado = consultarUsuario($conn,$email,$password);
-  // cerrar conexión '$conn' de base de datos
-  cerrarBDConexion($conn);
-  
-  if($resultado!=NULL && $resultado->num_rows>0){  
-    crearSesion('email', $email); // crea sesion y redirige
-  }else{
-    echo 'El email o password es incorrecto, <a href="login.php">vuelva a intenarlo</a>.<br/>';
-  }
-  
+session_start();
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Iniciar Sesión</title>
+    <style>
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Iniciar Sesión</h2>
+        <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
+            <p class="error-message">Usuario y/o contraseña incorrecta.</p>
+        <?php endif; ?>
+        <form action="signin.php" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>
