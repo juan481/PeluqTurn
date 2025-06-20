@@ -1,6 +1,5 @@
 
 <?php
-<<<<<<< HEAD
 include "sesion.php"; // Incluye el archivo de sesión para utilizar las funciones
 
 // Verifica si el usuario ha iniciado sesión, de lo contrario, redirige a login.php
@@ -11,9 +10,6 @@ if (verificarSesion()) {
 
 // Obtener el email de la sesión
 $email = obtenerEmailSesion();
-=======
-        echo "";
->>>>>>> parent of bbdc370 (Funciona credenciales, hay que revisar login para seguir trabajando)
 ?>
 
 <!DOCTYPE html>
